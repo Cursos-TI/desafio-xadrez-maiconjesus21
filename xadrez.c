@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-int main(){
+   int main(){
+   
+    printf("novo commit\n");
 
    int torre = 1;     //definição das variaveis
    int bispo = 1;
