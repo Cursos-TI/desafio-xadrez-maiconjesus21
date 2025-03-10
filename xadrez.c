@@ -3,12 +3,12 @@
 
 
 
-   int main(){
-   printf("novo commit\n");
+int main(){
 
    int torre = 1;
    int bispo = 1;
-   int movcavalo2 = 0;
+   int movcavalo = 1;
+   int movcavalo2 = 1;
 
     printf("\n***movimento torre***\n");  //movimento da torre
    while (torre <= 5)
@@ -33,15 +33,14 @@
     
      printf("\n\n***movimento do cavalo***\n\n");   //movimento do cavalo
    
-     for  (int movcavalo = 0; movcavalo < 1; movcavalo++)
-     {
-        printf("\ncavalo: baixo\n");
-        printf("\ncavalo: baixo\n");
-        while (movcavalo2 < 1)
+    while (movcavalo--)
+    {
+        for (movcavalo2 = 0; movcavalo2 < 2; movcavalo2++)
         {
-        printf("\ncavalo: esquerda\n");
-        movcavalo2++;
+            printf("\nbaixo\n");
         }
+        printf("\nesquerda\n");
     }
+    
     return 0;
 }
