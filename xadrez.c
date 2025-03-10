@@ -3,7 +3,8 @@
 
 
 
-int main(){
+   int main(){
+   printf("novo commit\n");
 
    int torre = 1;
    int bispo = 1;
