@@ -2,46 +2,71 @@
 
 
 
+ 
 
-   int main(){
-   printf("novo commit\n");
-
-   int torre = 1;
-   int bispo = 1;
-   int movcavalo = 1;
-   int movcavalo2 = 1;
-
-    printf("\n***movimento torre***\n");  //movimento da torre
-   while (torre <= 5)
-    {
-        printf("\ntorre: direita\n");     
-        torre++;
+  void torr(int torre){
+    if (torre > 0){
+      printf("\ntorre: direita\n");
+      torr(torre - 1);
     }
-      printf("\n***movimento do bispo***\n"); //movimento do bispo
-    
-     do
-     {
-       printf("\nbispo: cima,direita\n");
-       bispo++;
-    } while (bispo <= 5);
-     
-    printf("\n***movimento da rainha***\n"); //movimento da rainha
-
-    for ( int rainha = 0; rainha < 8; rainha++)
-    {
-        printf("\nrainha: esquerda\n");
-    }
-    
-     printf("\n\n***movimento do cavalo***\n\n");   //movimento do cavalo
+  }
+  void bisp(int bispo){
+   while (bispo < 5){
+    printf("\nbispo: cima\n");
+    bispo++;
+    for (int mov = 0; mov < 5; mov++)break;
+   {
+    printf("\nbispo: direita\n");
+   }
+   } 
    
-    while (movcavalo--)
-    {
-        for (movcavalo2 = 0; movcavalo2 < 2; movcavalo2++)
+    
+  }
+  void rainh(int rainha){
+     if (rainha > 0)
+     {
+      rainh(rainha - 1);
+      printf("\nrainha: esquerda\n");
+     }
+     
+    
+  }
+   void caval(int cavalo){
+      int movcav = 1;
+
+      while(movcav--){
+        for (int movimento = 0; movimento < 2; movimento++)
         {
-            printf("\nbaixo\n");
+          printf("\ncavalo: cima\n");
         }
-        printf("\nesquerda\n");
+        printf("\ncavalo: direita\n");
+      }
+    
     }
     
-    return 0;
+     
+    
+    
+  
+   
+
+
+
+
+ 
+int main(){
+  printf("\n***torre***\n");
+  torr(5);
+  printf("\n");
+  printf("\n***bispo***\n");
+  bisp(0);
+  printf("\n");
+  printf("\n***rainha***\n");
+  rainh(8);
+  printf("\n***cavalo***\n");
+  caval(0);
+  
+ return 0;
+
 }
+
