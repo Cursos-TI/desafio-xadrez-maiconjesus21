@@ -2,7 +2,7 @@
 
 
 
- 
+   printf("novo commit\n");
 
   void torr(int torre){
     if (torre > 0){
